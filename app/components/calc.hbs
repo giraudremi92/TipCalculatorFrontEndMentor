@@ -1,0 +1,146 @@
+<div class="Bgimage">
+
+</div>
+
+<div class="CalContainer container is-max-desktop">
+
+	<div class="columns" style="padding:1rem;">
+		<div class="column">
+<p>Bill</p>
+
+<div class="field">
+  <p class="control has-icons-left">
+    <span class="icon is-small is-left">
+      <i class="fas fa-usd"></i>
+    </span>
+  </p>
+
+  <Input
+  class="input"
+  id="Amount"
+  @type="text"
+  @value={{this.amount}}
+  placeholder='0'
+  {{on "keyup" (fn this.pourcentage) }}
+/>
+</div>
+
+
+<p>Select Tip %</p>
+<br>
+<div class="columns is-mobile is-multiline">
+<div class="column is-half-mobile is-one-third-desktop is-one-third-fullhd">
+<button class="button Pbtn" type="button" {{on "click" (fn this.getpourcentage 5)}} 
+{{on "click" (fn this.pourcentage) }}
+>5%</button>
+
+</div>
+<div class="column is-half-mobile is-one-third-desktop is-one-third-fullhd">
+<button class="button Pbtn" type="button" {{on "click" (fn this.getpourcentage 10)}} 
+{{on "click" (fn this.pourcentage) }}
+>10 %</button>
+
+</div>
+<div class="column is-half-mobile is-one-third-desktop is-one-third-fullhd">
+<button class="button Pbtn" type="button" {{on "click" (fn this.getpourcentage 15)}} 
+{{on "click" (fn this.pourcentage) }}
+>15%</button>
+
+</div>
+
+<div class="column is-half-mobile is-one-third-desktop is-one-third-fullhd">
+<button class="button Pbtn" type="button" {{on "click" (fn this.getpourcentage 25)}} 
+{{on "click" (fn this.pourcentage) }}
+>25%</button>
+
+</div>
+<div class="column is-half-mobile is-one-third-desktop is-one-third-fullhd">
+<button class="button Pbtn" type="button" {{on "click" (fn this.getpourcentage 50)}} 
+{{on "click" (fn this.pourcentage) }}
+>50 %</button>
+
+</div>
+
+<div class="column is-half-mobile is-one-third-desktop is-one-third-fullhd">
+ <Input
+  class="input CustomI"
+  id="Customp"
+  @type="text"
+  @value={{this.customp}}
+  placeholder="Custom"
+  {{on "keyup" (fn this.getpourcentage this.customp)}}
+  {{on "click" (fn this.getpourcentage this.customp)}}
+  {{on "keyup" (fn this.pourcentage)}}
+  />
+
+</div>
+
+
+
+</div>
+
+<div class="columns">
+
+
+</div>
+
+
+
+<br>
+<div>
+ <p class="is-inline-block">Number of People</p>
+ {{#if (lte this.persons 0)}}
+ <p class="help is-danger is-inline-block is-pulled-right">
+        Can't be zero
+      </p>
+      {{/if}}
+</div>
+<div class="field">
+  <p class="control has-icons-left">
+    <span class="icon is-small is-left">
+      <i class="fas fa-user"></i>
+    </span>
+  </p>
+<Input
+class="input {{this.ZeroPers}}"
+  id="persons"
+  @type="text"
+  @value={{this.persons}}
+  placeholder="0"
+  {{on "keyup" (fn this.pourcentage)}}
+/>
+</div>
+
+</div>
+
+
+<div class="column ResultCol is-mobile">
+	<div class="columns is-mobile is-multiline">
+	<div class="column is-half">
+	<p>Tip amount</p>
+	<p style="color: hsl(184, 14%, 56%);">/ person</p>
+	</div>
+	<div class="column is-half">
+		<p class="TotalAmounts">${{this.tipbyp}}</p>
+	</div>
+	<div class="column is-half">
+	<p>Total</p>
+	<p style="color: hsl(184, 14%, 56%);">/ person</p>
+
+	</div>
+	<div class="column is-half"> <p class="TotalAmounts">${{this.totalbyp}}</p></div>
+
+	</div>
+	
+	<div class="column has-text-centered ResetCol">
+	<button class="button Resetbtn"  type="button" {{on "click" this.reset}}>RESET</button>
+
+	</div>
+
+
+		</div>
+	</div>
+
+
+</div>
+

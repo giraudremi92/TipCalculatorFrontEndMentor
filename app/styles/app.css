@@ -1,0 +1,130 @@
+@import "bulma.min.css";
+
+@font-face {
+ font-family: "Space Mono";
+ src: url(/assets/fonts/SpaceMono-Regular.ttf) format('truetype');
+} 
+
+body{
+	background-color: hsl(185, 41%, 84%);
+	height : 100vh;
+}
+
+
+
+.Bgimage{
+	background-image: url("/assets/image/logo.svg");
+	background-repeat: no-repeat;
+	padding: 100px;
+	background-position: center;
+}
+
+
+
+.CalContainer{
+	background-color: hsl(0, 0%, 100%);
+	padding: 2rem;
+	border-radius: 2rem;
+}
+
+input::placeholder {
+  color: hsl(184, 14%, 56%)!important;}
+
+input {
+    text-align: right;
+    background-color: hsl(189, 41%, 97%) !important;
+    border-color: transparent !important;
+    font-size :24px !important;
+    font-family: "Space Mono";
+    color: hsl(183, 100%, 15%); 
+    font-weight: 700 !important;
+
+}
+
+input:hover{
+   border: solid 2px #9FE8DF !important;
+}
+
+.CustomI{
+	width:120px;
+	height: 50px;
+	font-size: 20px !important;
+}
+
+.ResultCol{
+	background-color: hsl(183, 100%, 15%);
+	color : hsl(0, 0%, 100%);
+	border-radius: 1rem;
+	margin-left: 2rem;
+	padding-top: 3rem;
+	padding-left: 3rem;
+}
+
+.ResetCol{
+	margin-top: 8rem;
+}
+
+@media (max-width: 800px) {
+
+	.ResultCol{
+
+		padding-left: 1rem;
+		margin-left: 0px;
+	
+	}
+
+	.ResetCol{
+	margin-top: 1rem;
+}
+
+}
+
+p{
+	font-family: "Space Mono";
+	font-weight: 700;
+}
+
+.button{
+	font-family: "Space Mono";
+	font-weight: 700 !important;
+	width: 120px !important;
+	height: 50px !important;
+        font-size :24px !important;
+
+
+}
+
+.Pbtn{
+	background-color: hsl(183, 100%, 15%);
+	color : hsl(0, 0%, 100%);
+}
+
+.Pbtn:hover{
+	background-color: #9FE8DF;
+	color: hsl(183, 100%, 15%);
+	border: 0px;
+}
+
+.TotalAmounts{
+	font-size: 39px ;
+	color:  hsl(172, 67%, 45%);
+}
+
+.Resetbtn{
+	opacity: 30%;
+	background-color:  hsl(172, 67%, 45%);
+	border: 0px;
+	width: 90% !important;
+}
+
+.Resetbtn:hover{
+	background-color: #9FE8DF;
+	color: hsl(183, 100%, 15%);
+	border: 0px;
+	opacity: 100%;	
+}
+
+.ZeroPers{
+  border: solid 2px #F85226 !important;
+}
+
